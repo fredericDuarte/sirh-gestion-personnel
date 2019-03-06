@@ -14,21 +14,11 @@ public class Collaborateur {
 	private String photo;
 	private ZonedDateTime dateHeureCreation;
 	private boolean actif;
+	private String intitulePoste;
+	private Departement departement;
 
-	public Collaborateur(String matricule, String nom, String prenom, LocalDate dateDeNaissance, String adresse,
-			String numeroSecuriteSociale, String emailPro, String photo, ZonedDateTime dateHeureCreation,
-			boolean actif) {
+	public Collaborateur() {
 		super();
-		this.matricule = matricule;
-		this.nom = nom;
-		this.prenom = prenom;
-		this.dateDeNaissance = dateDeNaissance;
-		this.adresse = adresse;
-		this.numeroSecuriteSociale = numeroSecuriteSociale;
-		this.emailPro = emailPro;
-		this.photo = photo;
-		this.dateHeureCreation = dateHeureCreation;
-		this.actif = actif;
 	}
 
 	public String getMatricule() {
@@ -109,6 +99,22 @@ public class Collaborateur {
 
 	public void setActif(boolean actif) {
 		this.actif = actif;
+	}
+
+	public String getIntitulePoste() {
+		return intitulePoste;
+	}
+
+	public void setIntitulePoste(String intitulePoste) {
+		this.intitulePoste = intitulePoste;
+	}
+
+	public Departement getDepartement() {
+		return departement;
+	}
+
+	public void setDepartement(Departement departement) {
+		this.departement = departement;
 	}
 
 }

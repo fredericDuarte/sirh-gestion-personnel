@@ -4,6 +4,7 @@
 
 <web-app>
 	<display-name>sgp</display-name>
+
 	<servlet>
 		<servlet-name>ListerCollaborateursController</servlet-name>
 		<servlet-class>dev.sgp.web.ListerCollaborateursController</servlet-class>
@@ -15,6 +16,10 @@
 	<servlet>
 		<servlet-name>AjouterCollaborateursController</servlet-name>
 		<servlet-class>dev.sgp.web.AjouterCollaborateurController</servlet-class>
+		<init-param>
+			<param-name>proper</param-name>
+			<param-value>/WEB-INF/application.properties</param-value>
+		</init-param>
 	</servlet>
 
 	<servlet-mapping>
@@ -28,8 +33,9 @@
 	</servlet-mapping>
 
 	<servlet-mapping>
-		<servlet-name>AjouterrCollaborateursController</servlet-name>
+		<servlet-name>AjouterCollaborateursController</servlet-name>
 		<url-pattern>/collaborateurs/nouveau</url-pattern>
 	</servlet-mapping>
+
 
 </web-app>
