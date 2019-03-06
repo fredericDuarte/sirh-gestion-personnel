@@ -2,6 +2,8 @@
 <%@page import="dev.sgp.entite.Collaborateur"%>
 <%@page import="dev.sgp.entite.Departement"%>
 <%@ page language="java" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html>
 
@@ -26,7 +28,9 @@ dist/css/bootstrap.css">
 <body>
 	<h1>Les collaborateurs</h1>
 
-
+<c:forEach items="${ listeNoms }" var="user" >
+    <p><c:out value="${ user.getNom() }" /> !</p>
+</c:forEach>
 
 	<div class="container">
 		<form action="<%=request.getContextPath()%>/collaborateurs/nouveau"
